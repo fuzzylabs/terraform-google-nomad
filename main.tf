@@ -29,7 +29,7 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 module "nomad_and_consul_servers" {
-  source = "git::git@github.com:hashicorp/terraform-google-consul.git//modules/consul-cluster?ref=v0.4.0"
+  source = "git::git@github.com:fuzzylabs/terraform-google-consul.git//modules/consul-cluster?ref=fuzzy_fixes"
 
   gcp_project_id = var.gcp_project
   gcp_region = var.gcp_region
@@ -88,7 +88,7 @@ data "template_file" "startup_script_nomad_consul_server" {
 module "nomad_clients" {
   # When using these modules in your own templates, you will need to use a Git URL with a ref attribute that pins you
   # to a specific version of the modules, such as the following example:
-  # source = "git::git@github.com:hashicorp/terraform-google-nomad.git//modules/nomad-cluster?ref=v0.0.1"
+  # source = "git::git@github.com:fuzzylabs/terraform-google-nomad.git//modules/nomad-cluster?ref=fuzzy_fixes"
   source = "./modules/nomad-cluster"
 
   gcp_region = var.gcp_region
