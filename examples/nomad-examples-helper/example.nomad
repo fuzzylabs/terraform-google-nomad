@@ -16,13 +16,13 @@ job "example" {
   # omitted, this inherits the default region name of "global". Note that this example job
   # is hard-coded to us-west1-a, so if you are running your example elsewhere, make
   # sure to update this setting, as well as the datacenters setting.
-  region = "us-west1"
+  region = "europe-west2"
 
   # The "datacenters" parameter specifies the list of datacenters which should
   # be considered when placing this task. This must be provided. Note that this example job
   # is hard-coded to us-east-1, so if you are running your example elsewhere, make
   # sure to update this setting, as well as the region setting.
-  datacenters = ["us-west1-a", "us-west1-b", "us-west1-c"]
+  datacenters = ["europe-west2-a", "europe-west2-b", "europe-west2-c"]
 
   # The "type" parameter controls the type of job, which impacts the scheduler's
   # decision on placement. This configuration is optional and defaults to
